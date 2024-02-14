@@ -94,7 +94,7 @@ main{
 .firstcard img,.secondcard img,.thirdcard img,.fourthcard img{
     height: 8VH;
     align-self:self-end;
-    margin-top: 20px;
+    
 }
 
 @media screen and (mix-width:700px)
