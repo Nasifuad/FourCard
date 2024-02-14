@@ -6,10 +6,12 @@
 }
 body{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 header{
     height: 30vh;
@@ -24,21 +26,21 @@ header{
     align-items: center;
 }
 .headerpanel .first{
-    font-size: 3.5rem;
+    font-size: 51px;
     color: rgba(0, 0, 0, 0.454);
     font-weight: lighter;
     text-align: center;
     padding-bottom: 10px;
 }
 .second{
-    font-size: 3.7rem;
+    font-size: 53px;
     font-weight: 900;
     color: rgba(5, 5, 5, 0.829);
     text-align: center;
     padding-bottom: 20px;
 }
 h3{
-    font-size: 2.2rem;
+    font-size: 30px;
     color: rgba(0, 0, 0, 0.379);
     font-weight: 100;
     text-align: center;
