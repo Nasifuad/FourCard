@@ -1,177 +1,295 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --DarkBlue: hsl(234, 12%, 34%);
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
 }
-body{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
 }
-header{
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
-.headerpanel{
+header {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  padding: 2rem;
+  gap: 0.5rem;
+  /* width: 0%; */
+  text-align: center;
+}
+.first {
+  /* width: 80%; */
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--GrayishBlue);
+}
+.second {
+  /* width: 80%; */
+  color: var(--DarkBlue);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.descrip {
+  color: var(--GrayishBlue);
+  font-size: inherit;
+  font-size: 1rem;
+  width: 65%;
+}
+
+.cardholder {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  padding: 1rem;
+}
+.card {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  width: 300px;
+  max-width: 350px;
+
+  /* border: 1px solid blue; */
+  position: relative;
+  height: 180px;
+  margin: 1rem;
+  padding: 0.8rem;
+  background-color: var(--VeryLightGray);
+  box-shadow: 0px 2px 20px hsla(0, 0%, 0%, 0.296),
+    0px 0px 10px hsla(0, 0%, 0%, 0.296);
+  padding: 10px;
+  border-radius: 0.5rem;
+  border-top: 0.3rem solid var(--Red);
+}
+.icon {
+  width: 80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+.title {
+  color: var(--DarkBlue);
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 5px 0px;
+}
+.des {
+  color: var(--GrayishBlue);
+  font-weight: 400;
+}
+.firstcard {
+  border-top: 0.3rem solid var(--Cyan);
+}
+.secondcard {
+  border-top: 0.3rem solid var(--Red);
+}
+.thirdcard {
+  border-top: 0.3rem solid var(--Orange);
+}
+.fourthcard {
+  border-top: 0.3rem solid var(--Blue);
+}
+@media screen and (max-width: 985px) {
+  .cardholder {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 1rem;
+  }
 }
-.headerpanel .first{
-    font-size: 51px;
+/* .headerpanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+/* .headerpanel .first {
+  font-size: 51px;
+  color: rgba(0, 0, 0, 0.454);
+  font-weight: lighter;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.second {
+  font-size: 53px;
+  font-weight: 900;
+  color: rgba(5, 5, 5, 0.829);
+  text-align: center;
+  padding-bottom: 20px;
+}
+h3 {
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.379);
+  font-weight: 100;
+  text-align: center;
+}
+main {
+  width: 70vw;
+}
+.cardholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstcard,
+.secondcard,
+.thirdcard,
+.fourthcard {
+  height: 30vh;
+  width: 35vh;
+  background-color: white;
+  box-shadow: 10px 10px 4px hsl(0, 0%, 98%), -10px 10px 4px hsl(0, 0%, 98%);
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px;
+  text-align: start;
+
+  border-radius: 7px;
+  border-top: 7px solid hsl(180, 62%, 55%);
+}
+.secondcard {
+  border-top: 7px solid hsl(0, 78%, 62%);
+  margin-bottom: 1rem;
+}
+.thirdcard {
+  border-top: 7px solid hsl(34, 97%, 64%);
+}
+.fourthcard {
+  border-top: 7px solid hsl(212, 86%, 64%);
+}
+.firstcard h1,
+.secondcard h1,
+.thirdcard h1,
+.fourthcard h1 {
+  color: rgba(0, 0, 0, 0.735);
+  padding: 10px;
+}
+.firstcard p,
+.secondcard p,
+.thirdcard p,
+.fourthcard p {
+  padding: 10px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.47);
+  font-weight: 800;
+}
+.firstcard img,
+.secondcard img,
+.thirdcard img,
+.fourthcard img {
+  height: 8vh;
+  align-self: self-end;
+}
+
+@media screen and (mix-width: 700px) {
+  .headerpanel {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+  .headerpanel h1 {
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.454);
     font-weight: lighter;
     text-align: center;
     padding-bottom: 10px;
-}
-.second{
-    font-size: 53px;
-    font-weight: 900;
-    color: rgba(5, 5, 5, 0.829);
-    text-align: center;
-    padding-bottom: 20px;
-}
-h3{
-    font-size: 30px;
-    color: rgba(0, 0, 0, 0.379);
-    font-weight: 100;
-    text-align: center;
-}
-main{
- 
-     width: 70vw;
-}
-.cardholder{
+  }
+  .second {
+    color: rgba(0, 0, 0, 0.767);
+    padding-bottom: 10px;
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 12px;
+    padding: 0 10px 0;
+  }
+  .cardholder {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.firstcard,.secondcard,.thirdcard,.fourthcard{
+  }
+  .firstcard,
+  .secondcard,
+  .thirdcard,
+  .fourthcard {
+    font-size: 10px;
     height: 30vh;
     width: 35vh;
     background-color: white;
-    box-shadow:10px 10px 4px hsl(0, 0%, 98%),
-    -10px 10px 4px hsl(0, 0%, 98%);
+    box-shadow: 5px 5px 1px hsl(0, 5%, 98%), -5px 5px 1px hsl(0, 5%, 98%);
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 20px;
     display: flex;
-    justify-content:flex-start;
-    padding:30px;
-    text-align: start;
-    
-    border-radius: 7px;
-    border-top:7px solid hsl(180, 62%, 55%);
-}
-.secondcard{
-    border-top:7px solid  hsl(0, 78%, 62%);
+    justify-content: flex-start;
+    padding: 20px;
+    align-items: flex-start;
+    border-radius: 4px;
+    border-top: 5px solid hsl(180, 62%, 55%);
+  }
+  .secondcard {
+    border-top: 5px solid hsl(0, 78%, 62%);
     margin-bottom: 1rem;
-}
-.thirdcard{
-    border-top:7px solid hsl(34, 97%, 64%) ;
-}
-.fourthcard{
-    border-top:7px solid  hsl(212, 86%, 64%);
-}
-.firstcard h1,.secondcard h1,.thirdcard h1,.fourthcard h1{
+  }
+  .thirdcard {
+    border-top: 5px solid hsl(34, 97%, 64%);
+  }
+  .fourthcard {
+    border-top: 5px solid hsl(212, 86%, 64%);
+  }
+  .firstcard h1,
+  .secondcard h1,
+  .thirdcard h1,
+  .fourthcard h1 {
     color: rgba(0, 0, 0, 0.735);
     padding: 10px;
-}
-.firstcard p,.secondcard p,.thirdcard p,.fourthcard p{
+  }
+  .firstcard p,
+  .secondcard p,
+  .thirdcard p,
+  .fourthcard p {
     padding: 10px;
-    font-size: 20px;
+    font-size: 10px;
     color: rgba(0, 0, 0, 0.47);
     font-weight: 800;
-}
-.firstcard img,.secondcard img,.thirdcard img,.fourthcard img{
-    height: 8VH;
-    align-self:self-end;
-    
-}
-
-@media screen and (mix-width:700px)
-{
-    .headerpanel{
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 30px;
-    }
-    .headerpanel h1{
-        font-size: 20px;
-        color: rgba(0, 0, 0, 0.454);
-        font-weight: lighter;
-        text-align: center;
-        padding-bottom: 10px;
-        
-    }
-    .second{
-        color: rgba(0, 0, 0, 0.767);
-        padding-bottom: 10px;
-         font-size: 21px;
-    }
-    h3{
-        font-size: 12px;
-        padding: 0 10px 0;
-    }
-    .cardholder{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .firstcard,.secondcard,.thirdcard,.fourthcard{
-        font-size: 10px;
-        height: 30vh;
-        width: 35vh;
-        background-color: white;
-        box-shadow:5px 5px 1px hsl(0, 5%, 98%),
-        -5px 5px 1px hsl(0, 5%, 98%);
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-        display: flex;
-        justify-content: flex-start;
-        padding:20px;
-        align-items: flex-start;
-        border-radius: 4px;
-        border-top:5px solid hsl(180, 62%, 55%);
-    }
-    .secondcard{
-        border-top:5px solid  hsl(0, 78%, 62%);
-        margin-bottom: 1rem;
-    }
-    .thirdcard{
-        border-top:5px solid hsl(34, 97%, 64%) ;
-    }
-    .fourthcard{
-        border-top:5px solid  hsl(212, 86%, 64%);
-    }
-    .firstcard h1,.secondcard h1,.thirdcard h1,.fourthcard h1{
-        color: rgba(0, 0, 0, 0.735);
-        padding: 10px;
-    }
-    .firstcard p,.secondcard p,.thirdcard p,.fourthcard p{
-        padding: 10px;
-        font-size: 10px;
-        color: rgba(0, 0, 0, 0.47);
-        font-weight: 800;
-    }
-    .firstcard img,.secondcard img,.thirdcard img,.fourthcard img{
-        position: relative;
-        left: 80%;
-        top: 20%;
-        width: 40px;
-    }
-}
+  }
+  .firstcard img,
+  .secondcard img,
+  .thirdcard img,
+  .fourthcard img {
+    position: relative;
+    left: 80%;
+    top: 20%;
+    width: 40px;
+  }
+} */
